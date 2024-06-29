@@ -43,12 +43,12 @@ const MainForm = () => {
       return [intlCode, match[2], match[3], match[4], match[5]].filter(Boolean).join('-');
     }
     return value;
+    
   };
 
   const handlePhoneNumberChange = (value) => {
     const formattedValue = formatPhoneNumber(value);
     setPhoneNumber(formattedValue);
-
     if (value.trim() === '') {
       setPhoneNumberError('Номер телефона не может быть пустым');
     } else {

@@ -38,13 +38,9 @@ const validateFullName = (fullName) => {
   
     const nextDay = new Date(currentDate);
     nextDay.setDate(currentDate.getDate() + 1);
-
-    // Проверка, что выбранная дата не является будущей датой
     if (selectedDate >= nextDay) {
       return { isValid: false, errorMessage: 'Дата рождения не может быть в будущем' };
     }
-  
-    // Если дата прошла проверку, возвращаем объект с isValid: true
     return { isValid: true, errorMessage: '' };
   }
   
